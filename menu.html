@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/resetStyle.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/topnav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/menuStyle.css" />
+
+    <link rel="icon" href="imgs/logo_experiment.png" />
+    <title>Thai Restaurant & Cafe - Menu</title>
+    <script
+      src="https://kit.fontawesome.com/efd16bbb09.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="top-nav">
+      <div class="top-nav__branding">
+        <a href="/">
+          <img
+            class="logo"
+            src="imgs/logo_experiment.png"
+            alt="Thai Restaurant & Cafe logo"
+            height="55px"
+            width="60px"
+          />
+        </a>
+        <h1 class="top-nav__branding__title">Thai Restaurant & Cafe</h1>
+      </div>
+      <div class="top-nav__nav">
+        <a class="top-nav__nav__item" href="/">Home</a>
+        <a class="top-nav__nav__item active" href="/menu.html">Menu</a>
+        <a class="top-nav__nav__item" href="https://www.grubhub.com/"
+          >Order Online</a
+        >
+        <a class="top-nav__nav__item" href="/contact.html">Contact Us</a>
+      </div>
+
+      <div class="hamburger">
+        <div class="topleft"></div>
+        <div class="topright"></div>
+        <div class="midleft"></div>
+        <div class="midright"></div>
+        <div class="bottomleft"></div>
+        <div class="bottomright"></div>
+      </div>
+    </nav>
+
+    <dialog class="dialog" id="dialog">
+      <img id="dailog__img" src="data:," alt="" />
+    </dialog>
+
+    <section class="header nav-intersect">
+      <h1 class="header__title">- Menu -</h1>
+    </section>
+
+    <main class="main-content">
+      <nav class="side-nav">
+        <div class="sticky-wrapper">
+          <a href="#appetizers" draggable="false">Appetizers</a>
+          <a href="#soups" draggable="false">Soups</a>
+          <a href="#curry-dishes" draggable="false">Curry Dishes</a>
+          <a href="#dry-noodles" draggable="false">Dry Noodles</a>
+          <a href="#soup-noodles" draggable="false">Soup Noodles</a>
+          <a href="#rice-plates" draggable="false">Rice Plates</a>
+          <a href="#desserts" draggable="false">Desserts</a>
+          <a href="#beverages" draggable="false">Beverages</a>
+          <a href="#side-dishes" draggable="false">Side Dishes</a>
+        </div>
+      </nav>
+
+      <section class="menu-section">
+        <article class="menu-section__appetizers side-nav-intersect">
+          <h4><span id="appetizers"></span>Appetizers</h4>
+          <div class="card">
+            <h5>Fresh Rolls</h5>
+            <p class="price">6.50</p>
+            <p class="desc">
+              Delicate rice paper, shrimp, chicken, rice noodles, lettuce,
+              basil, peanut sauce.
+            </p>
+            <img
+              src="imgs/dishes/Fresh-Rolls.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Fried Spring Rolls</h5>
+            <p class="price">6.50</p>
+            <p class="desc">
+              Crispy fried spring roll filled with ground pork and vegetables.
+            </p>
+            <img
+              src="imgs/dishes/Fried-Spring-Rolls.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Chicken Satay & Sticky Rice</h5>
+            <p class="price">7.95</p>
+            <p class="desc">Chicken skewer, sticky rice, peanut sauce.</p>
+            <img
+              src="imgs/dishes/Chicken-Satay.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Tod Mun Pla <i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">6.50</p>
+            <p class="desc">Fried minced fish with curry paste.</p>
+            <img
+              src="imgs/dishes/Tod-mun.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Grilled Fish Balls <i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">7.95</p>
+            <p class="desc">
+              Grilled fish balls glazed with homemade hot sauce.
+            </p>
+            <img
+              src="imgs/dishes/Grilled-fish-balls.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Som Tum <i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">7.95</p>
+            <p class="desc">
+              Salad with shred green papaya, carrot, tomatoes, string bean,
+              peanut.
+            </p>
+            <img
+              src="imgs/dishes/Som-tum.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+        </article>
+
+        <div class="gradient-overlay">
+          <span id="soups"></span>
+          <img class="divider-sm" src="imgs/bg/soups3.png" alt="" />
+        </div>
+
+        <article class="menu-section__soups side-nav-intersect">
+          <h4>Soups</h4>
+          <div class="card">
+            <h5>Tom Yum Goong <i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">4.75</p>
+            <p class="desc">
+              Spicy, salty, and sour soup with shrimp & mushroom.
+            </p>
+            <img
+              src="imgs/dishes/Tom-yum.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+
+          <div class="card">
+            <h5>Tom Kha Chicken <i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">4.75</p>
+            <p class="desc">
+              Spicy, salty, coconut chicken soup with extra spices.
+            </p>
+            <img
+              src="imgs/dishes/Tom-kha.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+        </article>
+
+        <div class="gradient-overlay">
+          <span id="curry-dishes"></span>
+          <img class="divider-sm" src="imgs/bg/curry2.jpg" alt="" />
+        </div>
+
+        <article class="menu-section__curry-dishes side-nav-intersect">
+          <h4>Curry Dishes</h4>
+
+          <div class="card">
+            <h5>Red Curry Chicken<i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">13.25</p>
+            <p class="desc">
+              Spicy, salty red curry with chicken, basil, eggplant, and green
+              pea.
+            </p>
+            <img
+              src="imgs/dishes/Red-curry.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Green Curry Chicken<i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">13.25</p>
+            <p class="desc">
+              Spicy, salty green curry with chicken, basil, eggplant, and green
+              pea.
+            </p>
+            <img
+              src="imgs/dishes/Green-curry.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+
+          <div class="card">
+            <h5>Yellow Curry Chicken</h5>
+            <p class="price">13.25</p>
+            <p class="desc">
+              Yellow curry with chicken & potatoes with extra spices.
+            </p>
+            <img
+              src="imgs/dishes/Yellow-curry.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+        </article>
+
+        <div class="gradient-overlay">
+          <span id="dry-noodles"></span>
+          <img class="divider-sm" src="imgs/bg/padthai-bg.avif" alt="" />
+        </div>
+
+        <article class="menu-section__dry-noodles side-nav-intersect">
+          <h4>Dry Noodles</h4>
+
+          <div class="card">
+            <h5>Pad Thai</h5>
+            <p class="price">13.25</p>
+            <p class="desc">
+              Stir-fried rice noodles, eggs, vegetables in tamarind fish sauce,
+              dried shrimp, garlic.
+            </p>
+            <img
+              src="imgs/dishes/Pad-thai.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+
+          <div class="card">
+            <h5>Pad See Ew</h5>
+            <p class="price">13.25</p>
+            <p class="desc">
+              Stir-fried wide rice noodles, beef, eggs, vegetables in soy sauce,
+              garlic.
+            </p>
+            <img
+              src="imgs/dishes/Pad-see-ew.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Kua Gai</h5>
+            <p class="price">13.25</p>
+            <p class="desc">
+              Stir-fried wide rice noodles, chicken, eggs, vegetables.
+            </p>
+            <img
+              src="imgs/dishes/Kua-gai.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+        </article>
+
+        <div class="gradient-overlay">
+          <span id="soup-noodles"></span>
+          <img class="divider-sm" src="imgs/bg/Kaosoi-bg.avif" alt="" />
+        </div>
+
+        <article class="menu-section__soup-noodles side-nav-intersect">
+          <h4>Soup Noodles</h4>
+
+          <div class="card">
+            <h5>Tom Yum Noodle <i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">13.50</p>
+            <p class="desc">
+              Rice noodle, pork, liver, miched pork, pork balls in a spicy,
+              sour, salty, spicy broth.
+            </p>
+            <img
+              src="imgs/dishes/Tom-yum-noodle.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Khao Soi <i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">13.50</p>
+            <p class="desc">
+              Egg noodle, tender chicken drumstick in a creamy coconut curry
+              broth.
+            </p>
+            <img
+              src="imgs/dishes/Khaoi-soi.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Boat Noodle <i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">13.50</p>
+            <p class="desc">
+              Rice noodle, beef, beef balls, liver, vegetable in a thick savory
+              broth.
+            </p>
+            <img
+              src="imgs/dishes/Boat-noodle.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Clear Broth Noodle</h5>
+            <p class="price">13.50</p>
+            <p class="desc">
+              Rice noodle, pork, pork balls, vegetable in a refreshing savory
+              broth.
+            </p>
+            <img
+              src="imgs/dishes/Clear-broth-noodle.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+        </article>
+
+        <div class="gradient-overlay">
+          <span id="rice-plates"></span>
+          <img class="divider-sm" src="imgs/bg/stir-fried.png" alt="" />
+        </div>
+
+        <article class="menu-section__rice-plates side-nav-intersect">
+          <h4>Rice Plates</h4>
+          <div class="card">
+            <h5>Pad Kra Pao <i class="fa-solid fa-pepper-hot"></i></h5>
+            <p class="price">14.95</p>
+            <p class="desc">
+              Stir-fried squid, shrimp and basil with garlic, chili and homemade
+              sauce.
+            </p>
+            <img
+              src="imgs/dishes/Pad-kra-pao.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Kao Na Gai</h5>
+            <p class="price">14.95</p>
+            <p class="desc">Chicken in our homemade gravy on rice.</p>
+            <img
+              src="imgs/dishes/Kao-na-gai-square.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Kao Moo Daeng</h5>
+            <p class="price">14.95</p>
+            <p class="desc">
+              Marinated pork, deep fried pork belly, chinese sausage, egg,
+              cucumber with a sweat savory sauce on rice.
+            </p>
+            <img
+              src="imgs/dishes/Moo-daeng.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Kao Kha Moo</h5>
+            <p class="price">14.95</p>
+            <p class="desc">
+              Marinated tender pork hock, boiled egg, vegetable, gravy on rice.
+            </p>
+            <img
+              src="imgs/dishes/Kha-moo.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+        </article>
+
+        <div class="gradient-overlay">
+          <span id="desserts"></span>
+          <img class="divider-sm" src="imgs/bg/desserts.png" alt="" />
+        </div>
+
+        <article class="menu-section__desserts side-nav-intersect">
+          <h4>Desserts</h4>
+          <div class="card">
+            <h5>Sticky Rice Banana</h5>
+            <p class="price">5.95</p>
+            <p class="desc">
+              Steamed sticky rice with coconnut milk, banana, black beans
+              wrapped in banana leaf.
+            </p>
+            <img
+              src="imgs/dishes/Sticky-rice-banana.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Mango Sticky Rice</h5>
+            <p class="price">5.95</p>
+            <p class="desc">Sticky rice, sweet coconut milk, mango.</p>
+            <img
+              src="imgs/dishes/Mango-sticky-rice.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Black Bean Sticky Rice</h5>
+            <p class="price">5.95</p>
+            <p class="desc">Sticky rice, sweet coconut milk, black beans.</p>
+            <img
+              src="imgs/dishes/Black-bean-sticky-rice.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+        </article>
+
+        <div class="gradient-overlay">
+          <span id="beverages"></span>
+          <img class="divider-sm" src="imgs/bg/beverages.png" alt="" />
+        </div>
+
+        <article class="menu-section__beverages side-nav-intersect">
+          <h4>Beverages</h4>
+          <div class="card">
+            <h5>Thai Iced Tea</h5>
+            <p class="price">4.25</p>
+            <p class="desc">Sweeten Thai iced tea.</p>
+            <img
+              src="imgs/dishes/Thai-iced-tea.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Thai Iced Green Tea</h5>
+            <p class="price">4.25</p>
+            <p class="desc">Sweeten Thai iced green tea.</p>
+            <img
+              src="imgs/dishes/Thai-iced-green-tea.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+          <div class="card">
+            <h5>Bottled Water</h5>
+            <p class="price">1.00</p>
+            <p class="desc">Bottled water</p>
+            <img
+              src="imgs/dishes/Bottled-water.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+        </article>
+
+        <div class="gradient-overlay">
+          <span id="side-dishes"></span>
+          <img class="divider-sm" src="imgs/bg/side-dishes.png" alt="" />
+        </div>
+
+        <article class="menu-section__side-dishes side-nav-intersect">
+          <h4>Side Dishes</h4>
+          <div class="card">
+            <h5>White Rice</h5>
+            <p class="price">2.00</p>
+            <p class="desc">White Jasmine rice.</p>
+            <img
+              src="imgs/dishes/White-rice.png"
+              alt=""
+              height="100px"
+              width="100px"
+              loading="lazy"
+              draggable="false"
+            />
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img class="footer__logo" src="imgs/logo_experiment.png" alt="" />
+      <h1 class="footer__brand">Thai Restaurant & Cafe</h1>
+      <img class="divider" src="imgs/thai-motif-short-divider.png" alt="" />
+      <div class="footer__info-container">
+        <a href="tel:+16179245376">
+          <div class="footer__info-container__item-wrapper">
+            <span class="fa-stack">
+              <i class="fa-regular fa-circle fa-stack-2x"></i>
+              <i class="fa-solid fa-phone fa-stack-1x"></i>
+            </span>
+
+            <h4>Telephone</h4>
+            <p>(617) 924 5376</p>
+          </div>
+        </a>
+        <div class="footer__info-container__item-wrapper">
+          <span class="fa-stack">
+            <i class="fa-regular fa-circle fa-stack-2x"></i>
+            <i class="fa-solid fa-house fa-stack-1x"></i>
+          </span>
+
+          <h4>174 Marlborough St,</h4>
+          <p>Boston, MA 02116</p>
+        </div>
+        <div class="footer__info-container__item-wrapper">
+          <span class="fa-stack">
+            <i class="fa-regular fa-circle fa-stack-2x"></i>
+            <i class="fa-solid fa-clock fa-stack-1x"></i>
+          </span>
+
+          <h4>Monday - Sunday</h4>
+          <p>11:00am - 9:00pm</p>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <iframe
+          class="map-wide"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.5376207410063!2d-71.08175374856906!3d42.352380479085234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a095c30a1c3%3A0x1579d3b457508e6b!2s174%20Marlborough%20St%2C%20Boston%2C%20MA%2002116!5e0!3m2!1sen!2sus!4v1653956026271!5m2!1sen!2sus"
+          width="600"
+          height="200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <p class="copyright">
+        <small
+          >&copy; Copyright <span class="copyright__year">2021</span> Thai
+          Restaurant & Cafe. All Rights Reserved.</small
+        >
+      </p>
+    </footer>
+    <script src="app.js" defer></script>
+    <script src="menu.js" defer></script>
+  </body>
+</html>

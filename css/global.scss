@@ -1,0 +1,111 @@
+// $clr-primary: rgb(5, 18, 129);
+// $clr-primary: rgb(15, 14, 70);
+$font-fancy: 'Berkshire Swash', cursive;
+$font-sans: 'Open Sans', sans-serif;
+
+// Animations
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes from-top {
+  from { transform: translateY(-10%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes from-bottom {
+  from { transform: translateY(10%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0rem); }
+  25% { transform: translateX(0.5rem); }
+  75% { transform: translateX(-0.5rem); }
+  100% { transform: translateX(0rem); }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-8%);
+}
+
+.from-right {
+  transform: translateX(8%);
+}
+
+.from-left, .from-right {
+  opacity: 0;
+  transition: transform 400ms ease-in, opacity 250ms ease-in;
+
+  &.appear {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+:root {
+  --clr-lightgray: hsl(0, 0%, 57%);
+  --clr-dark: hsl(0, 0%, 13%);
+  --clr-accent:hsl(53, 83%, 74%);
+  --clr-on-dark: white;
+  --clr-on-accent: rgb(66, 66, 66);
+  --clr-error: rgb(224, 37, 37);
+  --clr-error: rgb(218, 53, 12);
+
+
+  --font-fancy: #{$font-fancy};
+  --font-sans: #{$font-sans};
+
+  --form-border-radius: 6px;
+  --fade-in-duration: 700ms;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// scollbar style
+* {
+  // Firefox scrollbar style
+  scrollbar-color: #727274 #19191b;
+  // scrollbar-width: thin;
+
+  // Other browser scrollbar style
+  
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-sans;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw ,3rem);
+}
+
+h3 {
+  font-size: clamp(1.85rem, 4vw, 2.4rem);
+}

@@ -1,0 +1,116 @@
+/* Footer Section style */
+.footer {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clr-dark);
+  color: var(--clr-on-dark);
+  padding: 5rem 0;
+}
+
+.footer__logo {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.footer__brand {
+  font-family: var(--font-fancy);
+  font-size: 3rem;
+  user-select: none;
+}
+
+.footer .divider {
+  margin-bottom: 1rem;
+  width: Min(70vw, 700px);
+}
+
+.footer__info-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.footer__info-container__item-wrapper {
+  display: grid;
+  gap: 0.4em 0.6em;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas: 
+  "icon-xs title"
+  "icon-xs detail";
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.footer__info-container__item-wrapper i, .footer__info-container__item-wrapper span {
+  grid-area: icon-xs;
+  vertical-align: top;
+}
+
+.footer__info-container a {
+  color: var(--clr-accent);
+  text-decoration: none;
+}
+
+.footer__info-container a:hover {
+  opacity: 0.6;
+}
+
+.footer__info-container__item-wrapper h4 {
+  grid-area: title;
+}
+
+.footer__info-container__item-wrapper p {
+  grid-area: detail;
+}
+
+.copyright {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  letter-spacing: 0.04em;
+}
+
+.map-container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.map-wide {
+  width: 100%;
+}
+
+/*  Mid size Screen */
+@media only screen and (max-width: 930px) {
+  .footer__brand {
+    font-size: 2rem;
+  }
+
+  .footer__info-container__item-wrapper {
+    font-size: 0.85rem;
+  }
+}
+
+ /* Small size Screen */
+@media only screen and (max-width: 560px) {
+  .footer__info-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__info-container__item-wrapper {
+    font-size: 0.8rem;
+    justify-content: flex-start;
+  }
+
+  .footer__info-container__item-wrapper:first-child {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  .footer__info-container a {
+    grid-column: 1 / -1;
+  }
+}
+    
+  

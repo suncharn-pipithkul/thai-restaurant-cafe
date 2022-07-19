@@ -1,0 +1,389 @@
+body {
+  background-color: var(--clr-dark);
+
+  background-image: 
+    // linear-gradient(rgba(0, 0, 0, 0.65)),
+    // linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.95))
+    linear-gradient(
+      rgba(0, 0, 0, 0.9) 0%, 
+      rgba(0, 0, 0, 0.6) 10rem, 
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 1.0) 100%, 
+      )
+    , url('../imgs/bg/bangkok.jpg')
+    , url('https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.dialog {
+  background-color: var(--clr-dark);
+  color: var(--clr-on-dark);
+  text-align: center;
+  max-width: 900px;
+  border: 0;
+  border-radius: 20px;
+  gap: 2rem;
+  padding: 4rem 6rem;
+  animation: fade-in 200ms ease-in, from-bottom 200ms ease-in;
+
+  i {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  #error-code {
+    font-size: 5rem;
+  }
+
+  &::backdrop {
+    background-color: rgba(black, 0.9);
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    // every element that followed title
+    & ~ * {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+
+  &__button {
+    margin-top: 1rem;
+  }
+}
+
+// Any outline buttons
+.button {
+  position: relative;
+  width: Max(8em, 10vw);
+  padding: 1em;
+  border-radius: var(--form-border-radius);
+
+  border: 1px solid var(--clr-accent);
+  background-color: transparent;
+  // background-color: var(--clr-dark);
+  color: var(--clr-accent);
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-align: center;
+  cursor: pointer;
+  
+  &__text {
+    transition: all 0.2s;
+  }
+
+  &:active:not([disabled]) {
+    opacity: 0.7;
+  }
+
+  &:hover:not([disabled]) {
+    border: 1px solid var(--clr-accent);
+    background-color: var(--clr-accent);
+    color: var(--clr-on-accent);
+  }
+
+  // &:disabled, &[disabled] {
+  //   cursor: not-allowed;
+  //   opacity: 0.9;
+  //   border: 1px solid var(--clr-lightgray);
+  //   color: var(--clr-on-dark);
+  //   background-color: var(--clr-lightgray);
+  // }
+}
+
+// button loading class
+.button--loading {
+  cursor: wait;
+  color: transparent;
+  
+  // loading icon on a button
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1.9em;
+    height: 1.9em;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: var(--clr-accent);
+    border-radius: 50%;
+    animation: spin 1s ease infinite;
+  }
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--clr-on-dark);
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  
+  &__title {
+    margin-top: 0.4rem;
+    grid-column: 1 / -1;
+    font-family: var(--font-fancy);
+    font-size: 4rem;
+    text-align: center;
+
+    animation-name: fade-in, from-top;
+    animation-duration: var(--fade-in-duration);
+  }
+
+  .divider {
+    --fade-in-duration: 1s;
+    grid-column: 1 / -1;
+    max-width: 90%;
+    height: auto;
+
+    animation-name: fade-in, from-top;
+    animation-duration: var(--fade-in-duration);
+  }
+}
+
+.main-content {
+  display: grid;
+  gap: 12rem 4rem;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1280px;
+  grid-template-columns: minmax(2rem, min-content) 2fr minmax(2rem, 1fr);
+  grid-template-areas: 
+  "location map map"
+  "contact form .";
+  color: var(--clr-on-dark);
+
+  // select all container that's not a map container
+  [class$='-container']:not([class^='map']) {
+    h3 {
+      font-family: var(--font-fancy);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.5;
+      font-size: clamp(0.85rem, 1.8vw, 1rem);
+      white-space: nowrap;
+    }
+  }
+
+  .location-section {
+    display: contents;
+
+    .location-container {
+      grid-area: location;
+      text-align: end;
+      padding-bottom: 2rem;
+
+      &__sticky-wrapper {
+        position: sticky;
+        top: 5rem;
+      }
+    }
+  
+    .map-lg-container {
+      grid-area: map;
+      border-radius: 20px; 
+      overflow: hidden;
+      margin-bottom: 2rem;
+      background-color: var(--clr-dark);
+      // margin-top: 2rem;
+    }
+  }
+  
+  .map-wide {
+    width: 100%;
+  }
+
+  .contact-section {
+    display: contents;
+
+    .contact-container {      
+      grid-area: contact;
+      text-align: end;
+      padding-bottom: 9rem;
+
+      &__sticky-wrapper {
+        position: sticky;
+        top: 5rem;
+
+        a {
+          // color: var(--clr-on-dark);
+          color: var(--clr-accent);
+          text-decoration: none;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  
+    .form-container {
+      grid-area: form;
+
+      // add height to push footer down to display contact form
+      // in full 100vh - navbar height - footer top padding
+      min-height: calc(100vh - 10rem);
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        .form-field {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          position: relative;
+        }
+        
+        label {
+          font-size: 1rem;
+          font-weight: 600;
+        }
+  
+        input, textarea {
+          padding: 0.6em;
+          border: 1px solid white;
+          border-radius: var(--form-border-radius);
+          font-size: 1rem;
+        }
+  
+        textarea {
+          resize: vertical;
+        }
+
+        .invalid-input {
+          outline: 3px solid var(--clr-error);
+          animation: shake 0.2s ease-in-out 0s 2;
+        }
+
+        .error-message {
+          --pad: 0.6em;
+          padding: var(--pad);
+          border-radius: var(--form-border-radius);
+          background-color: var(--clr-error);
+          color: var(--clr-on-dark);
+          box-shadow: 0.2em 0.2em 1em rgba(black, 0.4);
+          white-space: nowrap;
+
+          position: absolute;
+          z-index: 1;
+          top: calc(100% + var(--pad) + var(--pad));
+          left: 50%;
+          transform: translate(-50%, 0);
+          opacity: 0;
+          transition: opacity 0.1s ease-in;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: calc(50% - var(--pad));
+            bottom: 100%;
+            border: var(--pad) solid;
+            border-color: transparent transparent var(--clr-error) transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mid size Screen
+@media only screen and (max-width: 930px) {
+  .header {
+    padding-top: 8rem;
+    padding-bottom: 0;
+  }
+
+  .main-content {
+    grid-template-areas: 
+      "header header header"
+      "location map map"
+      "contact form form";
+    gap: 6rem 4rem;
+
+
+    .location-section {
+      .location-container {  
+        &__sticky-wrapper {
+          top: 7rem;
+        }
+      }
+    }
+    
+    .contact-section {
+      .contact-container {
+        &__sticky-wrapper {
+          top: 7rem;
+        }
+      }
+    }
+  }
+}
+
+// Mid small size screen
+@media only screen and (max-width: 720px) {
+  .dialog {
+    padding: 4rem 4rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Small size Screen
+@media only screen and (max-width: 560px) {
+  .main-content {
+    grid-template-areas: 
+      "header header header"
+      "location location location"
+      "map map map"
+      "contact contact contact"
+      "form form form";
+    gap: 3rem 4rem;
+
+    .location-section {
+      .location-container {
+        text-align: center;
+        padding-bottom: 0;
+      }
+    }
+
+    .contact-section {
+      .contact-container {
+        text-align: center;
+        min-height: auto;
+        padding-bottom: 0;
+      }
+
+      .form-container {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
+

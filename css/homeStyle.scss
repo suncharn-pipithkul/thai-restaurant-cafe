@@ -1,0 +1,200 @@
+// ==========  HERO SECTION  ===============
+.hero {
+  background: 
+  // linear-gradient(rgba(0, 0, 0, 0.6))
+  linear-gradient(
+    rgba(0, 0, 0, 0.9) 0%, 
+    rgba(0, 0, 0, 0.6) 10rem, 
+    rgba(0, 0, 0, 0.6) 100%
+    )
+  , url("https://images.unsplash.com/photo-1559314809-0d155014e29e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170")
+  , url("../imgs/bg/padthai-bg.avif");
+
+  color: var(--clr-on-dark);
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  gap: 2em;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-family: var(--font-fancy);
+    font-size: 5rem;
+    padding: 0 1em;
+    animation-name: fade-in, from-bottom;
+    animation-duration: var(--fade-in-duration);
+  }
+
+  &__divider {
+    height: auto;
+    width: 80%;
+    max-width: 500px;
+  }
+
+  &__order-now {
+    animation-name: fade-in, from-bottom;
+    animation-duration: var(--fade-in-duration);
+
+    border: 2px solid var(--clr-accent);;
+    background-color: transparent;
+    color: var(--clr-accent);
+    border-radius: 1em;
+
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    margin: 1em auto;
+    padding: 1em 2em;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid var(--clr-accent);
+      background-color: var(--clr-accent);
+      color: var(--clr-on-accent);
+    }
+  }
+}
+
+// ==========  ABOUT US SECTION  ===============
+.about-us {
+  width: Min(1400px, 100%);
+  padding: 3rem 3vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 0 auto;
+
+  &__img-container {
+    width: 100%;
+    height: auto;
+    align-self: center;
+
+    &__img {
+      width: 100%;
+      height: auto;
+      max-width: 800px;
+      border-radius: 2.5%;
+    }
+  }
+
+  &__txt-container {
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-right: 4em;
+      line-height: 1.4;
+    }
+
+    p + p {
+      margin-top: 1em;
+    }
+  }
+}
+
+// ==========  BIG DIVIDER  ===============
+.img-divider {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url('../imgs/bg/thai-food.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100vw;
+  height: 400px;
+}
+
+// ==========  POPULAR DISHES SECTION  ===============
+.popular-dishes {
+  text-align: center;
+  padding: 3rem 3vw;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .dishes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    &__item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: clamp(150px , 25vw, 250px);
+        height: auto;
+      }
+      
+      p {
+        margin-top: 0.6rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+}
+
+// Large size Screen
+@media only screen and (min-width: 1200px) {
+  .hero {
+    &__title {
+      font-size: 9rem;
+    }
+  }
+}
+
+// Mid size Screen
+@media only screen and (max-width: 930px) {
+  .about-us {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    &__title {
+      font-size: 3.8rem;
+    }
+  }
+}
+
+// Small size Screen
+@media only screen and (max-width: 560px) {
+  .hero {
+    &__title {
+      font-size: 3rem;
+    }
+  }
+
+  .popular-dishes {
+    .dishes-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// Tiny size Screen
+// @media only screen and (max-width: 420px) {
+//   .top-nav {
+//     padding: 0.6rem 2rem;
+
+//     &__branding {
+//       &__title {
+//         display: none;
+//       }
+//     }
+//   }
+// }

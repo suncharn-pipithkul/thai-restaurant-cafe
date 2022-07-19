@@ -1,0 +1,204 @@
+$elements-index: main-content, modals, header, navigation, hamburger;
+
+// ==========  NAV BAR  ===============
+.logo {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  transition: opacity 200ms ease-in-out;
+  color: transparent; // prevent alt tag flashing in firefox
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.top-nav {
+  --clr-nav-bg: transparent;
+  --clr-nav-txt: var(--clr-on-dark);
+  --clr-nav-accent: var(--clr-accent);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  z-index: index($list: $elements-index, $value: header);
+  width: 100vw;
+  background-color: var(--clr-nav-bg);
+  padding: 0.6rem 3vw;
+
+  color: var(--clr-nav-txt);
+  transition: background-color 150ms ease-in-out;
+
+  .active {
+    color: var(--clr-nav-accent);
+  }
+  
+  &__branding {
+    display: flex;
+    align-items: center;
+
+    &__title {
+      font-family: var(--font-fancy);
+      font-size: 1.8rem;
+      margin: 0 1rem;
+      white-space: nowrap;
+      user-select: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    &__item {
+      min-width: max-content;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--clr-nav-txt);
+      padding: 0.4em 1em;
+      transition: color 180ms ease-in-out;
+
+      &:hover {
+        color: var(--clr-nav-accent);
+      }
+    }
+  }
+
+  $icon-height: 5px;
+  $icon-dim: 30px;
+  $move: 5px;
+  $scale: 1;
+
+  .hamburger {
+    display: none;
+    grid-template-columns: repeat(2, minmax(calc(#{$icon-dim} / 2), 1fr));
+    align-items: center;
+    width: $icon-dim;
+    height: $icon-dim;
+    margin-right: 2vw;
+    z-index: index($list: $elements-index, $value: hamburger);
+    cursor: pointer;
+
+    div[class$='left'], div[class$='right'] {
+      height: $icon-height;
+      background-color: var(--clr-nav-txt);
+      transition: transform 200ms, opacity 100ms;
+    }
+
+    div[class$='left'] {
+      border-radius: $icon-height 0 0 $icon-height;
+      margin-right: -1px;
+    }
+    
+    div[class$='right'] {
+      border-radius: 0 $icon-height $icon-height 0;
+      margin-left: -1px;
+    }
+
+    &.open {
+      div[class^='mid'] {
+        opacity: 0;
+      }
+
+      .topleft {
+        transform-origin: left;
+        transform: translateX($move) rotate(45deg) scaleX($scale);
+      }
+
+      .topright {
+        transform-origin: right;
+        transform: translateX(-$move) rotate(-45deg) scaleX($scale);
+      }
+
+      .bottomleft {
+        transform-origin: left;
+        transform: translateX($move) rotate(-45deg) scaleX($scale);
+      }
+
+      .bottomright {
+        transform-origin: right;
+        transform: translateX(-$move) rotate(45deg) scaleX($scale);
+      }
+
+    }
+  }
+}
+
+.top-nav-scrolled {
+  --clr-nav-bg: var(--clr-dark);
+  --clr-nav-txt: var(--clr-on-dark);
+  --clr-nav-accent: var(--clr-accent);
+
+  box-shadow: 0 3px 20px rgba(black, 0.2);
+}
+
+// Large size Screen
+@media only screen and (min-width: 1200px) {
+  .top-nav {
+    padding: 0.6rem 6vw;
+  }
+
+  .hero {
+    &__title {
+      font-size: 9rem;
+    }
+  }
+}
+
+// Mid size Screen
+@media only screen and (max-width: 930px) {
+  .top-nav {
+    flex-direction: column;
+
+    &__nav {
+      width: 100%;
+      justify-content: space-around;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+// Small size Screen
+@media only screen and (max-width: 560px) {
+  .top-nav {
+    flex-direction: row;
+
+    .slide {
+      transform: translateX(0%);
+    }
+
+    &__branding {
+      &__title {
+        white-space: normal;
+        overflow-wrap: break-word;
+      }
+    }
+
+    // Hamburger menu
+    &__nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: auto;
+      padding: 5.5em 0 5.5em 1em;
+      box-shadow: 0 3px 20px rgba(black, 0.4);
+
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 1.6em;
+
+      transform: translateX(120%);
+      transition: transform 200ms ease-in-out;
+      background-color: var(--clr-dark);
+    }
+
+    .hamburger {
+      display: grid;
+    }
+  }
+}

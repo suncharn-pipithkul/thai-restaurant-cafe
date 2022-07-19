@@ -1,0 +1,232 @@
+.logo {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+  color: transparent;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.top-nav {
+  --clr-nav-bg: transparent;
+  --clr-nav-txt: var(--clr-on-dark);
+  --clr-nav-accent: var(--clr-accent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 3;
+  width: 100vw;
+  background-color: var(--clr-nav-bg);
+  padding: 0.6rem 3vw;
+  color: var(--clr-nav-txt);
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+}
+
+.top-nav .active {
+  color: var(--clr-nav-accent);
+}
+
+.top-nav__branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-nav__branding__title {
+  font-family: var(--font-fancy);
+  font-size: 1.8rem;
+  margin: 0 1rem;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.top-nav__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-nav__nav__item {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--clr-nav-txt);
+  padding: 0.4em 1em;
+  -webkit-transition: color 180ms ease-in-out;
+  transition: color 180ms ease-in-out;
+}
+
+.top-nav__nav__item:hover {
+  color: var(--clr-nav-accent);
+}
+
+.top-nav .hamburger {
+  display: none;
+  -ms-grid-columns: (minmax(calc(30px / 2), 1fr))[2];
+      grid-template-columns: repeat(2, minmax(calc(30px / 2), 1fr));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 2vw;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.top-nav .hamburger div[class$='left'], .top-nav .hamburger div[class$='right'] {
+  height: 5px;
+  background-color: var(--clr-nav-txt);
+  -webkit-transition: opacity 100ms, -webkit-transform 200ms;
+  transition: opacity 100ms, -webkit-transform 200ms;
+  transition: transform 200ms, opacity 100ms;
+  transition: transform 200ms, opacity 100ms, -webkit-transform 200ms;
+}
+
+.top-nav .hamburger div[class$='left'] {
+  border-radius: 5px 0 0 5px;
+  margin-right: -1px;
+}
+
+.top-nav .hamburger div[class$='right'] {
+  border-radius: 0 5px 5px 0;
+  margin-left: -1px;
+}
+
+.top-nav .hamburger.open div[class^='mid'] {
+  opacity: 0;
+}
+
+.top-nav .hamburger.open .topleft {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: translateX(5px) rotate(45deg) scaleX(1);
+          transform: translateX(5px) rotate(45deg) scaleX(1);
+}
+
+.top-nav .hamburger.open .topright {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: translateX(-5px) rotate(-45deg) scaleX(1);
+          transform: translateX(-5px) rotate(-45deg) scaleX(1);
+}
+
+.top-nav .hamburger.open .bottomleft {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: translateX(5px) rotate(-45deg) scaleX(1);
+          transform: translateX(5px) rotate(-45deg) scaleX(1);
+}
+
+.top-nav .hamburger.open .bottomright {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: translateX(-5px) rotate(45deg) scaleX(1);
+          transform: translateX(-5px) rotate(45deg) scaleX(1);
+}
+
+.top-nav-scrolled {
+  --clr-nav-bg: var(--clr-dark);
+  --clr-nav-txt: var(--clr-on-dark);
+  --clr-nav-accent: var(--clr-accent);
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 1200px) {
+  .top-nav {
+    padding: 0.6rem 6vw;
+  }
+  .hero__title {
+    font-size: 9rem;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .top-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .top-nav__nav {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .top-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .top-nav .slide {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .top-nav__branding__title {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  .top-nav__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+    padding: 5.5em 0 5.5em 1em;
+    -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    gap: 1.6em;
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+    -webkit-transition: -webkit-transform 200ms ease-in-out;
+    transition: -webkit-transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+    background-color: var(--clr-dark);
+  }
+  .top-nav .hamburger {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+/*# sourceMappingURL=topnav.css.map */
