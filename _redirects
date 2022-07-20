@@ -1,0 +1,2 @@
+# Redirects from what the browser requests to what netlify serve
+/menu.html  https://www.google.com
