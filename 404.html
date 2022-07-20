@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/resetStyle.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/topnav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/404.css" />
+
+    <link rel="icon" href="imgs/logo_experiment.png" />
+    <title>Thai Restaurant & Cafe</title>
+    <script
+      src="https://kit.fontawesome.com/efd16bbb09.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="top-nav">
+      <div class="top-nav__branding">
+        <a href="/">
+          <img
+            class="logo"
+            src="imgs/logo_experiment.png"
+            alt="Thai Restaurant & Cafe logo"
+            height="55px"
+            width="60px"
+          />
+        </a>
+        <h1 class="top-nav__branding__title">Thai Restaurant & Cafe</h1>
+      </div>
+      <div class="top-nav__nav">
+        <a class="top-nav__nav__item" href="/">Home</a>
+        <a class="top-nav__nav__item" href="/menu.html">Menu</a>
+        <a class="top-nav__nav__item" href="https://www.grubhub.com/"
+          >Order Online</a
+        >
+        <a class="top-nav__nav__item" href="/contact.html">Contact Us</a>
+      </div>
+
+      <div class="hamburger">
+        <div class="topleft"></div>
+        <div class="topright"></div>
+        <div class="midleft"></div>
+        <div class="midright"></div>
+        <div class="bottomleft"></div>
+        <div class="bottomright"></div>
+      </div>
+    </nav>
+
+    <main class="nav-intersect">
+      <h1 class="title">404</h1>
+      <p class="subtitle">Sorry, we can't find the page you're looking for!</p>
+      <a class="link-home" href="/">Go back</a>
+    </main>
+
+    <footer class="footer">
+      <img class="footer__logo" src="imgs/logo_experiment.png" alt="" />
+      <h1 class="footer__brand">Thai Restaurant & Cafe</h1>
+      <img class="divider" src="imgs/thai-motif-short-divider.png" alt="" />
+      <div class="footer__info-container">
+        <a href="tel:+16179245376">
+          <div class="footer__info-container__item-wrapper">
+            <span class="fa-stack">
+              <i class="fa-regular fa-circle fa-stack-2x"></i>
+              <i class="fa-solid fa-phone fa-stack-1x"></i>
+            </span>
+
+            <h4>Telephone</h4>
+            <p>(617) 924 5376</p>
+          </div>
+        </a>
+        <div class="footer__info-container__item-wrapper">
+          <span class="fa-stack">
+            <i class="fa-regular fa-circle fa-stack-2x"></i>
+            <i class="fa-solid fa-house fa-stack-1x"></i>
+          </span>
+
+          <h4>174 Marlborough St,</h4>
+          <p>Boston, MA 02116</p>
+        </div>
+        <div class="footer__info-container__item-wrapper">
+          <span class="fa-stack">
+            <i class="fa-regular fa-circle fa-stack-2x"></i>
+            <i class="fa-solid fa-clock fa-stack-1x"></i>
+          </span>
+
+          <h4>Monday - Sunday</h4>
+          <p>11:00am - 9:00pm</p>
+        </div>
+      </div>
+
+      <div class="map-container">
+        <iframe
+          class="map-wide"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.5376207410063!2d-71.08175374856906!3d42.352380479085234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a095c30a1c3%3A0x1579d3b457508e6b!2s174%20Marlborough%20St%2C%20Boston%2C%20MA%2002116!5e0!3m2!1sen!2sus!4v1653956026271!5m2!1sen!2sus"
+          width="600"
+          height="200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <p class="copyright">
+        <small
+          >&copy; Copyright <span class="copyright__year">2021</span> Thai
+          Restaurant & Cafe. All Rights Reserved.</small
+        >
+      </p>
+    </footer>
+    <script src="app.js" defer></script>
+    <script src="main.js" defer></script>
+  </body>
+</html>
