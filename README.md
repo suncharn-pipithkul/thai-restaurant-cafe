@@ -1,5 +1,5 @@
 # Thai-restaurant-cafe
 
-A fictional Thai restaurant located in Boston.
+A website for a fictional Thai restaurant located in Boston.
 
 Live: https://thairestaurant.netlify.app/
